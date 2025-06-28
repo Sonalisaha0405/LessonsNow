@@ -1,158 +1,88 @@
-<<<<<<< HEAD
-🧑‍🏫📚 Getting Started with the Learning Platform
-This guide will help new users — both students and instructors — understand how to use the platform effectively.
+# 📚 LessonsNow – Teacher-Student Resource Manager
 
-🚪 1. Authentication (Login/Register)
-🔐 Go to the Login or Register page from the landing screen.
+**LessonsNow** is a full-stack web application that facilitates seamless interaction between instructors and students. It supports course management, quiz creation, resource sharing, and real-time communication — all in one platform.
 
-You can sign up as a student or instructor (based on the registration form selection).
+---
 
-Instructor accounts have privileges to create and manage courses.
+## 🧑‍🏫 Getting Started Guide
 
-Students can enroll in courses and participate in quizzes.
+This guide will help **students** and **instructors** get started with the platform effectively.
 
-👩‍🏫 2. For Instructors
-Once logged in as an instructor:
+---
 
-✅ Create Courses
-Navigate to “Create Course” from the dashboard or side menu.
+### 🚪 1. Authentication (Login/Register)
 
-Fill out details like title, description, and category.
+- Navigate to the **Login** or **Register** page.
+- Sign up as either a **Student** or an **Instructor**.
+  - **Instructors** can create and manage courses and quizzes.
+  - **Students** can enroll in courses, download materials, and take quizzes.
 
-Submit to publish your course.
+---
 
-📤 Upload or 📁 Delete Course Files
-Open your course.
+### 👩‍🏫 2. Features for Instructors
 
-Use the “Upload Files” button to upload study materials (PDFs, docs, images).
+#### ✅ Create Courses
+- Go to the **Create Course** section from the dashboard or sidebar.
+- Provide course title, description, and category.
+- Submit to publish.
 
-Uploaded files appear in a list with delete options to remove any.
+#### 📤 Upload / 📁 Delete Course Files
+- Open a course page.
+- Upload materials (PDFs, Docs, Images) using the **Upload Files** button.
+- Delete files using the trash icon next to each uploaded item.
 
-📝 Create Quizzes
-Open your course page.
+#### 📝 Create Quizzes
+- Click **Create Quiz** on the course page.
+- Provide quiz title and description.
+- Add multiple-choice questions and submit.
 
-Click on “+ New Quiz” or “Create Quiz” button.
+#### 🚮 Delete Quizzes
+- Go to the quiz section of the course.
+- Use the **🗑️ Delete** button to remove a quiz.
 
-Enter quiz title, description, and add questions with multiple-choice options.
+#### 💬 Student Communication
+- Access the built-in chat or announcement section on the course page.
+- Post updates or reply to student queries in real time.
 
-Submit to save the quiz.
+---
 
-🚮 Delete Quizzes
-Inside the course → quiz section.
+### 🎓 3. Features for Students
 
-Use the 🗑️ Delete button to remove a quiz.
+#### 📜 Browse & Enroll in Courses
+- View all available courses on the home/dashboard page.
+- Click on a course to see details and click **Enroll**.
 
-💬 Communicate with Students
-Each course may have a discussion/chat feature (check the sidebar or bottom section).
+#### 📥 Download Resources
+- Access the course resources section.
+- Download any file by clicking the download icon.
 
-Instructors can post announcements or reply to student questions.
+#### 🧠 Take Quizzes
+- Navigate to the quiz section within an enrolled course.
+- Start a quiz, select answers, and submit.
+- Scores are displayed immediately after submission.
 
-🎓 3. For Students
-Once logged in as a student:
+---
 
-📜 View Courses & Enroll
-Browse the list of available courses.
+## 📌 Notes
 
-Click on a course card to see details.
+- Ensure you're logged in under the correct role (**Instructor** or **Student**).
+- All progress, uploads, and submissions are saved securely.
+- Unauthorized access or expired sessions will redirect to the login page.
 
-Click “Enroll” to register for the course.
+---
 
-📥 Download Resources
-Go to the enrolled course.
+## 🔧 Technologies Used
 
-All uploaded resources (like PDFs or notes) are shown.
+### 🔙 Backend
+- **Python** with **Flask**
+- **Flask-SQLAlchemy** (ORM)
+- **MySQL**
+- **Flask-SocketIO** (for real-time communication)
+- **Firebase Admin SDK** (authentication or notifications)
+- **Eventlet** (SocketIO support)
+- **Gunicorn** (for production deployment)
 
-Click download next to any file to save it locally.
+---
 
-🧠 Take Quizzes
-Navigate to the quiz section of an enrolled course.
-
-Click “Take Quiz” to start.
-
-Select answers and Submit when done.
-
-See your score immediately after submission.
-
-📌 Final Notes
-🕵️‍♀️ Make sure you're logged in to the correct role (instructor or student).
-
-💾 All your progress, uploads, and submissions are saved securely.
-
-🚫 Unauthorized access or expired sessions redirect you to the login screen.
-
-
-
-📚 LessonsNow – Teacher-Student Resource Manager
-LessonsNow is a full-stack web application designed to manage online courses, quizzes, resources, and real-time communication between students and instructors.
-
-🔧 Technologies Used
-Backend
-Python with Flask
-
-Flask-SQLAlchemy for ORM
-MySQL
-
-Flask-SocketIO for real-time features
-
-Firebase Admin SDK (likely for authentication or notifications)
-
-Eventlet (for SocketIO support)
-
-Gunicorn (for deployment)
-
-📁 Project Structure
-bash
-Copy
-Edit
-online-course-backend/
-├── app.py                    # Main Flask app
-├── auth/                    # Authentication routes
-├── courses/                 # Course management
-├── quiz/                    # Quiz creation and management
-├── uploads/                 # File upload functionality
-├── models/                  # Database models and setup
-├── .env                     # Environment variables
-├── requirements.txt         # Python dependencies
-🚀 Getting Started
-1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://your-repo-url.git
-cd project\ teacher-student\ resourese\ manager/online-course-backend
-2. Set Up a Virtual Environment
-bash
-Copy
-Edit
-python3 -m venv venv
-source venv/bin/activate  # on Windows: venv\Scripts\activate
-3. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Set Up Environment Variables
-Create a .env file at the root of the backend with the following (example):
-
-env
-Copy
-Edit
-DATABASE_URL=postgresql://user:password@localhost/dbname
-SECRET_KEY=your_secret_key
-FIREBASE_CREDENTIALS=path_to_firebase_adminsdk.json
-5. Run the Application
-bash
-Copy
-Edit
-python app.py
-The backend will be served on http://localhost:5000.
-
-📚 Features
-Instructor authentication and role-based access
-
-Course and resource management
-
-Quiz creation and submission
-
-Real-time messaging with SocketIO
+## 📁 Project Structure
 
