@@ -156,7 +156,3 @@ Quiz creation and submission
 
 Real-time messaging with SocketIO
 
-File uploads for educational content
-=======
-# TeacherStudent
->>>>>>> da45d6c21811bd33c452b51650a0f23ee2d57e6c
